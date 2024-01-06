@@ -1,0 +1,87 @@
+1.You can compare two JSON objects with the same properties without considering the order using a function to stringify and then compare them. Here's an example in JavaScript:
+
+function areObjectsEqual(obj1, obj2) {
+  return JSON.stringify(obj1) === JSON.stringify(obj2);
+}
+
+let obj1 = { name: "Person 1", age: 5 };
+let obj2 = { age: 5, name: "Person 1" };
+
+console.log(areObjectsEqual(obj1, obj2));
+
+2.
+<html>
+  <head>
+    <title>XML HTTP Request Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    This is for XML parsing
+
+    <script>
+      const xhr = new XMLHttpRequest();
+
+      const url = "https://restcountries.com/v3.1/all"; // Replace with your API endpoint
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+
+            for (i = 0; i < response.length; i++) {
+              console.log(response[i].flags.png);
+            }
+          } else {
+            console.error("There was a problem with the request.");
+          }
+        }
+      };
+
+      xhr.open("GET", url, true); // Parameters: method, URL, asynchronous (true/false)
+
+      xhr.send(); // For POST requests, you can pass data as an argument to send()
+    </script>
+  </body>
+</html>
+
+
+3.
+<html>
+  <head>
+    <title>XML HTTP Request Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    This is for XML parsing
+
+    <script>
+      const xhr = new XMLHttpRequest();
+
+      const url = "https://restcountries.com/v3.1/all"; // Replace with your API endpoint
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+
+            for (i = 0; i < response.length; i++) {
+              console.log("country name: " + response[i].name.common);
+              console.log("region: "+response[i].region);
+              console.log("population: " +response[i].population);
+              console.log("subregion: "+response[i].subregion);
+              
+            }
+          } else {
+            console.error("There was a problem with the request.");
+          }
+        }
+      };
+
+      xhr.open("GET", url, true); // Parameters: method, URL, asynchronous (true/false)
+
+      xhr.send(); // For POST requests, you can pass data as an argument to send()
+    </script>
+  </body>
+</html>

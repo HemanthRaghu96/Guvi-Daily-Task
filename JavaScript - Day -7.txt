@@ -1,0 +1,199 @@
+a)Get all the countries from Asia continent /region using Filter function
+
+<html>
+  <head>
+    <title>XML HTTP Request Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    This is for XML parsing
+
+    <script>
+      const xhr = new XMLHttpRequest();
+
+      const url = "https://restcountries.com/v3.1/all"; 
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+
+            const asiaCountries = response.filter(country => {
+              return country.region === 'Asia';
+            });
+
+            console.log('Countries in Asia:', asiaCountries);
+          } else {
+            console.error('Error:', xhr.status);
+          }
+        }
+      };
+
+      xhr.open("GET", url, true); 
+
+      xhr.send(); 
+    </script>
+  </body>
+</html>
+
+b)Get all the countries with a population of less than 2 lakhs using Filter function
+
+<html>
+  <head>
+    <title>XML HTTP Request Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    This is for XML parsing
+
+    <script>
+      const xhr = new XMLHttpRequest();
+
+      const url = "https://restcountries.com/v3.1/all"; 
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            const countriesWithLowPopulation = response.filter(country => {
+              const population = country.population;
+              return typeof population === 'number' && population < 200000;
+            });
+            console.log('Countries with population less than 2 lakhs:', countriesWithLowPopulation);
+          } else {
+            console.error('Error:', xhr.status);
+          }
+        }
+      };
+
+      xhr.open("GET", url, true); 
+
+      xhr.send(); 
+    </script>
+  </body>
+</html>
+
+c)Print the following details name, capital, flag, using forEach function
+
+<html>
+  <head>
+    <title>XML HTTP Request Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    This is for XML parsing
+
+    <script>
+      const xhr = new XMLHttpRequest();
+
+      const url = "https://restcountries.com/v3.1/all";
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            response.forEach(country => {
+              const name = country.name.common || 'N/A';
+              const capital = country.capital || 'N/A';
+              const flag = country.flags?.svg || 'N/A';
+              console.log('Name:', name);
+              console.log('Capital:', capital);
+              console.log('Flag:', flag);
+            });
+          } else {
+            console.error('Error:', xhr.status);
+          }
+        }
+      };
+
+      xhr.open("GET", url, true); 
+
+      xhr.send(); 
+    </script>
+  </body>
+</html>
+
+
+d)Print the total population of countries using reduce function
+
+<html>
+  <head>
+    <title>XML HTTP Request Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    This is for XML parsing
+
+    <script>
+      const xhr = new XMLHttpRequest();
+
+      const url = "https://restcountries.com/v3.1/all"; 
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            const totalPopulation = response.reduce((acc, country) => {
+              const population = country.population;
+              if (typeof population === 'number') {
+                return acc + population;
+              } else {
+                return acc;
+              }
+            }, 0);
+
+            console.log('Total Population of Countries:', totalPopulation);
+          } else {
+            console.error('Error:', xhr.status);
+          }
+        }
+      };
+
+      xhr.open("GET", url, true); 
+
+      xhr.send(); 
+    </script>
+  </body>
+</html>
+
+
+e)Print the country that uses US dollars as currency.
+
+<html>
+  <head>
+    <title>XML HTTP Request Example</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    This is for XML parsing
+
+    <script>
+      const xhr = new XMLHttpRequest();
+
+      const url = "https://restcountries.com/v3.1/all"; 
+
+      xhr.onreadystatechange = function () {
+        if (xhr.readyState === XMLHttpRequest.DONE) {
+          if (xhr.status === 200) {
+            const response = JSON.parse(xhr.responseText);
+            const usDollarCountries = response.filter(country => {
+              const currencies = country.currencies || {};
+              return currencies.hasOwnProperty('USD');
+            });
+            console.log('Countries that use US dollars as currency:', usDollarCountries);
+          } else {
+            console.error('Error:', xhr.status);
+          }
+        }
+      };
+
+      xhr.open("GET", url, true); 
+
+      xhr.send(); 
+    </script>
+  </body>
+</html>

@@ -1,0 +1,61 @@
+1.Write a blog on Difference between HTTP1.1 vs HTTP2
+HTTP/1.1:
+
+1.Uses multiple connections for parallel downloads. Each resource (e.g., image, stylesheet) typically requires a separate connection.
+2.Headers are not compressed, leading to increased overhead, especially when making multiple requests.
+3.Does not support multiplexing, meaning that only one request at a time can be outstanding on a connection.
+4.High latency due to the need to establish multiple connections and the lack of multiplexing.
+5.Limited support for prioritizing resources. The browser makes educated guesses about resource priority based on factors like resource order on the page.
+6.No inherent security features, but security can be added using HTTPS.
+
+HTTP/2:
+
+1.Uses a single connection per origin, reducing the need to establish multiple connections.
+2.Headers are compressed, reducing the amount of data that needs to be transmitted.
+3.Supports multiplexing, allowing multiple requests and responses to be interleaved on a single connection. This significantly reduces latency.
+4.Uses a binary protocol instead of plain text, which simplifies parsing and reduces the amount of data transmitted.
+5.Introduces server push, allowing the server to push resources to the client before the client requests them.
+6.Supports stream prioritization, allowing the client to specify the priority of resources. This enhances the control over the order in which resources are loaded.
+7.Encourages the use of HTTPS for additional security. Many modern browsers only support HTTP/2 over HTTPS.
+8.Designed to be backward-compatible with HTTP/1.1, meaning that it can be deployed incrementally.
+
+
+2.Write a blog about objects and its internal representation in Javascript
+
+In JavaScript, objects are one of the fundamental data types, and they are used to represent and store collections of key-value pairs. 
+Objects can be created using object literals, the Object() constructor, or by instantiating custom constructor functions.
+The internal representation of objects in JavaScript involves several key concepts:
+
+1. Object Literal:
+eg:
+// Object created using an object literal
+var person = {
+  name: "John",
+  age: 30,
+  address: {
+    city: "Example City",
+    country: "Example Country"
+  }
+};
+2. Object Properties:
+Objects consist of properties, where each property has a key (also called a "name" or "identifier") and a value. Properties can store data of 
+various types, including other objects or functions.
+eg:
+console.log(person.name); // Accessing property "name"
+console.log(person.address.city); // Accessing nested property "city"
+3. Object Methods:
+Functions can be assigned as values to object properties, creating methods.
+eg:
+var person = {
+  name: "John",
+  sayHello: function() {
+    console.log("Hello, " + this.name + "!");
+  }
+};
+person.sayHello(); // Calling the method
+4. Object Constructor:
+Objects can be created using the Object() constructor.
+eg:
+var person = new Object();
+person.name = "John";
+person.age = 30;

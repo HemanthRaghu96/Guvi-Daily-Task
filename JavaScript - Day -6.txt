@@ -1,0 +1,180 @@
+1)The class Movie is stated below. An instance of class Movie represents a film. This class has the following three properties:
+
+title, which is a String representing the title of the movie
+studio, which is a String representing the studio that made the movie
+rating, which is a String representing the rating of the movie (i.e. PG­13, R, etc)
+a) Write a constructor for the class Movie, which takes a String representing the title of the movie, a String representing the studio, and a String representing the rating as its arguments, and sets the respective class properties to these values.
+
+b) The constructor for the class Movie will set the class property rating to "PG" as default when no rating is provided.
+
+c) Write a method getPG, which takes an array of base type Movie as its argument, and returns a new array of only those movies in the input array with a rating of "PG". You may assume the input array is full of Movie instances. The returned array need not be full.
+
+d) Write a piece of code that creates an instance of the class Movie with the title “Casino Royale”, the studio “Eon Productions”, and the rating “PG­13”
+
+Source Code:
+
+class Movie{
+    constructor(title,studio,rating='PG'){
+        this.title=title;
+        this.studio=studio;
+        this.rating=rating
+    }
+     static getPG(movies){
+        return movies.filter(movie => movie.rating === "PG");
+
+    }
+}
+var newMovie=new Movie('Casino Royale','Eon Productions','PG­13')
+ console.log(newMovie)
+var newMovie1=new Movie('movie1','studio1','PGR')
+var newMovie2=new Movie('movie2','studio2','PG')
+var newMovie3=new Movie('movie3','studio3','PGR6')
+var newMovie4=new Movie('movie4','studio4','PG')
+var newMovie5=new Movie('movie5','studio5','PPG')
+var movieArr=[newMovie1,newMovie2,newMovie3,newMovie4,newMovie5]
+console.log(movieArr)
+const getArr=Movie.getPG(movieArr)
+getArr.forEach(movie => {
+    console.log(`Title: ${movie.title}, Rating: ${movie.rating}`);
+});
+
+output:
+
+Movie {
+  title: 'Casino Royale',
+  studio: 'Eon Productions',
+  rating: 'PG­13'
+}
+[
+  Movie { title: 'movie1', studio: 'studio1', rating: 'PGR' },
+  Movie { title: 'movie2', studio: 'studio2', rating: 'PG' },
+  Movie { title: 'movie3', studio: 'studio3', rating: 'PGR6' },
+  Movie { title: 'movie4', studio: 'studio4', rating: 'PG' },
+  Movie { title: 'movie5', studio: 'studio5', rating: 'PPG' }
+]
+Title: movie2, Rating: PG
+Title: movie4, Rating: PG
+	
+2)Convert the UML diagram to Typescript class. - use number for double
+
+Source Code:
+
+class circle {
+    constructor(radius, color) {
+        this.radius = radius
+        this.color = color
+    }
+    circleOne(){
+        console.log(`CircleOne radius: ${this.radius}`)
+    }
+    
+    circleTwo(){
+        console.log(`circleTwo radius: ${this.radius}, color: ${this.color}`)
+    }
+    stringConvertion(){
+        let arr=[]
+        arr.push(String(this.radius), this.color)
+        console.log(arr)
+    }
+    getRadius() {
+        console.log(`${this.radius}`)
+    }
+    setRadius() {
+        this.radius = 3.14
+        console.log(`${this.radius}`)
+    }
+    getColor() {
+        console.log(`${this.color}`)
+    }
+    setColor() {
+        this.color = "Yellow"
+        console.log(`${this.color}`)
+    }
+    getArea() {
+        let a = (Math.PI)* ((this.radius)** 2)
+        console.log(a.toFixed(2))
+
+    }
+    getCircumfrence() {
+        let c = 2 * (Math.PI)* (this.radius)
+        console.log(c.toFixed(2))
+    }
+}
+let data = new circle(1.0, "Blue")
+data.circleOne()
+data.circleTwo()
+data.stringConvertion()
+data.getRadius()
+data.setRadius()
+data.getColor()
+data.setColor()
+data.getArea()
+data.getCircumfrence()
+
+output:
+
+CircleOne radius: 1
+circleTwo radius: 1, color: Blue
+[ '1', 'Blue' ]
+1
+3.14
+Blue
+Yellow
+30.97
+19.73
+
+3)Write a “person” class to hold all the details.
+
+Source Code:
+
+class Person {
+ 
+    constructor(name, age, gender) {
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+    }  
+}
+
+const person1 = new Person("ram", 30, "Male");
+console.log(person1)
+const person2 = new Person("Sitha", 25, "Female");
+console.log(person2)
+
+output:
+
+Person { name: 'ram', age: 30, gender: 'Male' }
+Person { name: 'Sitha', age: 25, gender: 'Female' }
+
+4)write a class to calculate the uber price.
+
+Source Code:
+
+class UberPriceCalculator {
+
+    constructor(baseCost, perKmCost, perMinuteCost) {
+        this.baseCost = baseCost;
+        this.perKmCost = perKmCost;
+        this.perMinuteCost = perMinuteCost;
+    }
+    calculateFare(distanceInKm, timeInMinutes) {
+        const fare = this.baseCost + (distanceInKm * this.perKmCost) + (timeInMinutes * this.perMinuteCost);
+        return fare;
+    }
+    displayFare(distanceInKm, timeInMinutes) {
+        const fare = this.calculateFare(distanceInKm, timeInMinutes);
+        console.log(`Uber price Estimate:\nBase price: ${this.baseCost.toFixed(2)}Rs\nDistance price: ${(distanceInKm * this.perKmCost).toFixed(2)}Rs\nTime price: ${(timeInMinutes * this.perMinuteCost).toFixed(2)}Rs\nTotal price: ${fare.toFixed(2)}Rs`);
+    }
+}
+
+const uberCalculator = new UberPriceCalculator(4, 3, 1); 
+uberCalculator.displayFare(6, 30);  
+
+output:
+
+Uber price Estimate:
+Base price: 4.00Rs
+Distance price: 18.00Rs
+Time price: 30.00Rs
+Total price: 52.00Rs
+

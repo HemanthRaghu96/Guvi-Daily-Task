@@ -1,0 +1,85 @@
+2.Create your own resume data in JSON format.
+
+let resume={
+    name:"Hemanth R",
+    contactDetails: {
+        mailId: "hemanthraghu96@gmail.com",
+        PhoneNo: 9876543210,
+        address: {
+            no: "2",
+            street: "bharathi nager",
+            city: "vellore",
+            state: "TamilNadu"
+        }
+    education:{SSLC:'88.2 %',HSC :'94%',BE:'66%'},
+    technicalSkills:['HTML','CSS','JS','Node Js','Express Js','SQL','React'],
+    exprience:[
+        {company:'Concord International',role:'Customer Support Engineer',duration:'1 year'},
+        {company:'Thiran technologies',role:'IBM Maximo Consultant',duration:'2 year'},
+    ]
+	 Hobbies:['Dance','Sing','play','Fight','Gym']   
+}
+
+1.Based on above JSON iterate over all for loop(for,for in,for of,forEach)
+
+a)for loop : 'Get technicalSkills in list and print 1 by 1'
+
+for(i=0;i<resume.technicalSkills.length;i++){
+    console.log(resume.technicalSkills[i])
+}
+
+output:
+
+HTML
+CSS
+JS
+Node Js
+Express Js
+SQL
+React
+
+
+b)for of : 'Get exprience detailes'
+
+for(Hobby of resume.Hobbies){
+console.log(Hobby)
+}
+
+output:
+
+Dance
+Sing
+play
+Fight
+Gym
+
+c)for in : 'Get all scores from education'
+
+for(scores in resume.education){
+    console.log(resume.education[scores])
+}
+
+output:
+
+89
+94
+66
+
+d)forEach : 'Get all experience details'
+
+resume.exprience.forEach((element)=> {
+    console.log(element)
+})
+
+output:
+
+{
+  company: 'Concord International',
+  role: 'Customer Support Engineer',
+  duration: '1 year'
+}
+{
+  company: 'Thiran technologies',
+  role: 'IBM Maximo Consultant',
+  duration: '2 year'
+}
