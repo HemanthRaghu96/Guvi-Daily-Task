@@ -23,7 +23,7 @@ fetch("https://restcountries.com/v3.1/all")
     for (i = 0; i < y.length; i++) {
       // Create the card element
       const col = document.createElement("div");
-      col.classList.add("m-2", "col-sm-12", "col-md-6", "col-lg-4", "col-xl-4");
+      col.classList.add("m-2", "col-sm-6", "col-md-4", "col-lg-4", "col-xl-4");
       col.style.width = "18rem";
 
       const card = document.createElement("div");
@@ -31,8 +31,8 @@ fetch("https://restcountries.com/v3.1/all")
         "card",
         "h-100",
         "m-2",
-        "col-sm-12",
-        "col-md-6",
+        "col-sm-6",
+        "col-md-4",
         "col-lg-4",
         "col-xl-4"
       );
