@@ -78,7 +78,7 @@ const getImages = (apiURL) => {
 };
 
 const loadMoreImages = () => {
-  currentPage++; // Increment currentPage by 1
+  currentPage++;
   // If searchTerm has some value then call API with search term else call default API
   let apiUrl = `https://api.pexels.com/v1/curated?page=${currentPage}&per_page=${perPage}`;
   apiUrl = searchTerm
