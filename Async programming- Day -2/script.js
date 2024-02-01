@@ -92,10 +92,12 @@ fetch("https://restcountries.com/v3.1/all")
       weatherButton.onclick = (function (capital) {
         return function () {
           handleclick(capital);
+          
         };
       })(y[i].capital);
 
       function handleclick(city) {
+        
         const apiKey = "eb1c3a568d58f0c9854cfd72f5d5cc1c";
         const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&limit=5&appid=${apiKey}`;
 
