@@ -1,3 +1,16 @@
+# React Price Card 
+
+I created React Price Card app.\
+App is displayed in cards.\
+It shows the subscription price,name and plans.\
+I have used React JSX for design and functionality ,Tailwindcss for styling.\
+My React Price Card app is responsive can use in small to large phone,tablet,laptop and desktop.
+
+Live  App Demo: https://react-price-cards-task.netlify.app/
+
+This project is open scorce,\
+🚀 Give a Star ⭐️ & Fork to this project ... Happy coding! 🤩
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
