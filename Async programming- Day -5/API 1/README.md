@@ -1,4 +1,4 @@
-# API 1 with fetch(promise)
+# Image Gallery
 
 I implement the Image Gallery using fetch() API.\
 I use https://api.pexels.com/ to get data.\
@@ -6,7 +6,7 @@ I used Bootstrap cards to display the necessary data on the screen.\
 I also created searchbar so user can get the result according to there search.\
 I displayed the images in a grid.\
 I have used HYML,JS,CSS,bootstrap for styling.\
-My API 1 app is responsive can use in small to large phone,tablet,laptop and desktop.
+My Image Gallery is responsive can use in small to large phone,tablet,laptop and desktop.
 
 Demo Live : https://65bbf1297e5ef318448ba594--visionary-phoenix-f3ffd6.netlify.app/
 
