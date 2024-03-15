@@ -13,12 +13,7 @@ body {
     rgba(49, 171, 255, 1) 100%
   );
 }
-.app {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .card {
   display: flex;
   flex-direction: column;
@@ -65,4 +60,56 @@ li {
 }
 .buttonColorChange {
   background-color: #007bfe;
+}
+
+/* For small devices (up to 767px) */
+@media screen and (max-width: 767px) {
+  .app {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 70px;
+  }
+}
+
+/* For tablets (768px to 991px) */
+@media screen and (min-width: 768px) and (max-width: 991px) {
+  .app {
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100vh;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+ 
+}
+}
+
+/* For large devices (992px and above) */
+@media screen and (min-width: 992px) {
+  .app {
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100vh;
+    width: 87%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .app {
+    margin-top: 100px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 100vh;
+    width: 75%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+  }
 }

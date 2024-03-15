@@ -30,11 +30,11 @@ const Card = ({ count, setCount, data }) => {
   };
   return (
     <section>
-      <div className="rounded overflow-hidden  shadow-md  border-slate-400 relative w-11/12 min-h-96 ">
+      <div className="rounded overflow-hidden  shadow-md  border-slate-400 relative w-11/12 h-96 md:h-80 lg:h-80  xl:h-96">
         <img
           src={require("../images/cardimage.jpg")}
           alt="Banner"
-          className="w-full object-cover "
+          className="w-full object-cover md:h-32 lg:h-32 xl:h-44"
         />
 
         {/* Converting all data into design for card items */}

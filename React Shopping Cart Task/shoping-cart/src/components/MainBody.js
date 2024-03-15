@@ -84,7 +84,7 @@ const MainBody = ({ count, setCount }) => {
           With this shop hompeage template
         </p>
       </div>
-      <div className="grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-7 gap-y-12 m-12 w-4/5 mx-auto mt-24">
+      <div className="grid  grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-x-7 gap-y-12 m-12 w-4/5 lg:w-11/12 xl:w-9/12 mx-auto mt-24">
 
       {/* Card mapping is done to all the data provided. */}
       {/* Passing Props to Card */}
