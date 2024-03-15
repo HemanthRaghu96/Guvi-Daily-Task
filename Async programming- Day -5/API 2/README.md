@@ -7,7 +7,7 @@ I displayed the images in a Card and it display pokemon HP,Image,Name,Attack,Def
 I have used HYML,JS,CSS,bootstrap for styling.\
 My Pokemon card genertor app is responsive can use in small to large phone,tablet,laptop and desktop.
 
-Demo Live : https://65bbf17137a68a17f9400c17--serene-yeot-84b722.netlify.app/
+Demo Live : https://pokemon-card-generator-using-api.netlify.app/
 
 This project is open scorce, 🚀 Give a Star ⭐️ & Fork to this project ... Happy coding! 🤩
 
