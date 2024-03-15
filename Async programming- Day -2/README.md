@@ -7,7 +7,7 @@ I displayed the below values in the Bootstrap card,Capital, Lating, Flag, Afghan
 I have used React JSX for design and functionality ,bootstrap for styling.\
 My Restcountries & Weather app is responsive can use in small to large phone,tablet,laptop and desktop.
 
-Demo Live : https://65b008f8029462213ab13196--bucolic-syrniki-4be89d.netlify.app/
+Demo Live : https://restcountries-and-weather-using-api.netlify.app/
 
 This project is open scorce, 🚀 Give a Star ⭐️ & Fork to this project ... Happy coding! 🤩
 
