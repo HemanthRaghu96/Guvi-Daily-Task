@@ -8,7 +8,7 @@ The columns of the table contain First name, last name, address, pincode, gender
 Cleared the form fields after updating the record in the table.\
 I have used HTML,CSS,Bootstrap.
 
-Live Demo-
+Live Demo-https://dom-manipulations-with-form.netlify.app/
 
 This project is open scorce, 🚀 Give a Star ⭐️ & Fork to this project ... Happy coding! 🤩
 
