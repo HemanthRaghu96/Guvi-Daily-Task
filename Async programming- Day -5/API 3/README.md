@@ -6,7 +6,7 @@ I used Bootstrap cards to display the necessary data on the screen.\
 I have used HYML,JS,CSS,bootstrap for styling.\
 My Random Joke Generator app is responsive can use in small to large phone,tablet,laptop and desktop.
 
-Demo Live : https://65bbf1ad65f9651e6828009a--meek-griffin-84765b.netlify.app/
+Demo Live : https://random-joke-generator-using-api.netlify.app/
 
 This project is open scorce, 🚀 Give a Star ⭐️ & Fork to this project ... Happy coding! 🤩
 
