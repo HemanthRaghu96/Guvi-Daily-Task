@@ -8,7 +8,7 @@ I displayed the images in a grid.\
 I have used HYML,JS,CSS,bootstrap for styling.\
 My Image Gallery is responsive can use in small to large phone,tablet,laptop and desktop.
 
-Demo Live : https://65bbf1297e5ef318448ba594--visionary-phoenix-f3ffd6.netlify.app/
+Demo Live : https://image-gallery-using-api.netlify.app/
 
 This project is open scorce, 🚀 Give a Star ⭐️ & Fork to this project ... Happy coding! 🤩
 
